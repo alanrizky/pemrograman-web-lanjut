@@ -1,27 +1,182 @@
-# AlanTI2B
+# 03. Angular Fundamental
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+Praktikum - Bagian 1: Component Basic
+---
 
-## Development server
+* Membuat komponen dengan nama **courses** dengan cara ` ng g c courses `.
+![](img/03/1.bmp)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Kemudian ke directory **src/app** kemudian buka file **app.component.html**.
+* Edit isi file tersebut menjadi seperti berikut:
 
-## Code scaffolding
+```html
+<app-courses></app-courses>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<router-outlet></router-outlet>
+```
 
-## Build
+* Kemudian jalankan menggunakan ` ng serve --open `
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![](img/03/2.bmp)
 
-## Running unit tests
+* Buka file **app.modules.ts** dan hapus ` coursecomponent ` pada ` declarations `.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![](img/03/3.bmp)
 
-## Running end-to-end tests
+* Jalankan angular.
+* Terdapat error bahwa **app-courses** merupakan elemen yang tidak diketahui.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+![](img/03/4.bmp)
 
-## Further help
+> **Penjelasan**: ` CoursesComponent ` merupakan elemen penting pada **NgModule**, jika dihapus maka angular tidak dapat menampilkan isi dari html.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Praktikum - Bagian 2: Templates
+---
+
+* Pindah direktori ke **../courses**.
+* Buka file **courses.component.ts** kemudian tambahkan property baru dengan nama **title**.
+
+![](img/03/5.bmp)
+
+* Kemudian tambahankan string pada binding datanya. Buka file **courses.component.html**, dan tambahkan code seperti berikut:
+
+```html
+<p>
+  courses works!
+</p>
+<p>
+  {{"judulnya:" + title}}
+</p>
+```
+* Hasilnya seperti berikut:
+
+![](img/03/6.bmp)
+
+* Buka file **courses.component.ts** dan buat sebuah method dengan nama ` getTitle ` seperti berikut:
+
+![](img/03/7.bmp)
+
+* Ubah code pada file **courses.component.html** seperti berikut:
+
+![](img/03/9.bmp)
+
+* Hasilnya seperti berikut:
+
+![](img/03/8.bmp)
+
+Praktikum - Bagian 3: Directive
+---
+
+* Buka file **courses.component.ts** dan membuat property dengan nama **course** dengan data berupa array. Seperti berikut:
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-courses',
+  templateUrl: './courses.component.html',
+  styleUrls: ['./courses.component.css']
+})
+export class CoursesComponent implements OnInit {
+
+  title = 'Belajar Angular';
+  Title() {
+    return this.title;
+  }
+  Courses = [
+    {id: 0, name: 'HTML'},
+    {id: 1, name: 'PHP'},
+    {id: 2, name: 'ANGULAR'},
+    {id: 3, name: 'C#'},
+    {id: 4, name: 'VB.NET'}
+  ]
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+* Buka file **courses.component.html** lalu ditambahkan directive ` ngFor ` dan string interpolation seperti berikut:
+
+![](img/03/10.bmp)
+
+* Hasil pada browser:
+
+![](img/03/11.bmp)
+
+Praktikum - Bagian 4: Services dan Dependency Injection
+---
+
+* Membuat service baru yang bernama **courses** dengan perintah ` ng g s courses `.
+
+![](img/03/12.bmp)
+
+* Buka file **courses.service.ts** kemudian ditambahkan method getCourse seperti berikut:
+
+![](img/03/13.bmp)
+
+* Kemudian memodifikasi file **courses.component.ts** seperti berikut:
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-courses',
+  templateUrl: './courses.component.html',
+  styleUrls: ['./courses.component.css']
+})
+export class CoursesComponent implements OnInit {
+
+  title = 'Belajar Angular';
+  Title() {
+    return this.title;
+  }
+  Courses;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+* Hasilnya seperti berikut:
+
+![](img/03/14.bmp)
+
+* Menambahkan constructor seperti berikut:
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { CoursesService } from '../courses.service';
+
+@Component({
+  selector: 'app-courses',
+  templateUrl: './courses.component.html',
+  styleUrls: ['./courses.component.css']
+})
+export class CoursesComponent implements OnInit {
+
+  title = 'Belajar Angular';
+  Title() {
+    return this.title;
+  }
+  Courses;
+
+  constructor(private service:CoursesService) { 
+    this.Courses = service.getCourses;
+  }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+* Hasilnya seperti berikut:
+
+![](img/03/14.bmp)
