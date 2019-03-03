@@ -14,6 +14,21 @@ export class CoursesComponent implements OnInit {
   binding = 'property-binding';
   imageUrl = 'http://lorempixel.com/400/200';
   colSpan = 2;
+  isActive = false;
+  nama = 'Alan';
+
+  onSave($event) {
+    $event.stopPropagation();
+    console.log("Button sudah di klik", $event)
+  }
+
+  onDivClick($event) {
+    console.log("Ini method div", $event)
+  }
+
+  onKeyUp() {
+    console.log(this.nama);
+  }
 
   constructor(private service:CoursesService) { 
     this.Courses = service.getCourses();

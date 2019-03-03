@@ -28,4 +28,16 @@
   </tr>
 </table>
 
-<button type = 'button' class = "btn btn-primary"> Tambah </button>
+<button type = 'button' class = "btn btn-primary" [style.backgroundColor] = "isActive?'blue':'white'" > Tambah </button>
+<br><br>
+
+
+<button type = "button" class = "btn btn-danger" (click) = "onSave($event)"> Button </button>
+
+<div (click) = "onDivClick($event)">
+  <button type = "button" class = "btn btn-danger" (click) = "onSave($event)"> Button </button>
+</div>
+
+<!-- <input type = "text" [value] = 'nama' (keyup.enter) = "nama = $event.target.value;onKeyUp()"> -->
+
+<input type = "text" [(ngModel)] = "nama" (keyup.enter) = "onKeyUp()">

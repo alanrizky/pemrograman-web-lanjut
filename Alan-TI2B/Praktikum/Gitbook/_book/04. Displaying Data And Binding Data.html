@@ -271,6 +271,150 @@
 </ul>
 <p><img src="img/04/7.bmp" alt=""></p>
 <h2 id="praktikum---bagian-3-class-bagian">Praktikum - Bagian 3: Class Bagian</h2>
+<ul>
+<li>Buka file <strong>courses.component.ts</strong> kemudian menambah propery <code>isActive =  true</code> setelah line <code>colspan = 2;</code>.</li>
+</ul>
+<p><img src="img/04/8.bmp" alt=""></p>
+<ul>
+<li>Kemudian rubah <code>isActive</code> menjadi <strong>false</strong> dan inspect element maka kondisi active akan hilang.</li>
+</ul>
+<blockquote>
+<p>Mengubah <code>isActive</code> menjadi false.</p>
+</blockquote>
+<p><img src="img/04/9.bmp" alt=""> </p>
+<ul>
+<li>Hasilnya seperti berikut: </li>
+</ul>
+<p><img src="img/04/10.bmp" alt=""></p>
+<h2 id="praktikum---bagian-4-style-binding">Praktikum - Bagian 4: Style Binding</h2>
+<ul>
+<li>Buka file <strong>courses.component.html</strong> kemudian menambah kode berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &apos;<span class="hljs-attr">button</span>&apos; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-primary</span>&quot; [<span class="hljs-attr">style.backgroundColor</span>] = &quot;<span class="hljs-attr">isActive</span>?&apos;<span class="hljs-attr">blue</span>&apos;<span class="hljs-attr">:</span>&apos;<span class="hljs-attr">white</span>&apos;&quot; &gt;</span> Tambah <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut</li>
+</ul>
+<p><img src="img/04/11.bmp" alt=""></p>
+<h2 id="praktikum---bagian-5-event-binding">Praktikum - Bagian 5: Event Binding</h2>
+<ul>
+<li>Buka file <strong>courses.component.ts</strong> lalu membuat method dengan nama <code>onSave()</code>.</li>
+</ul>
+<p><img src="img/04/12.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>courses.component.html</strong> lalu menambahkan even click.</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">button</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-default</span>&quot; (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onSave</span>()&quot;&gt;</span> Button <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/13.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>courses.component.ts</strong> kemudian menambahkan event <code>$event</code>.</li>
+</ul>
+<p><img src="img/04/14.bmp" alt=""></p>
+<ul>
+<li>Menambahkan code pada <strong>courses.component.html</strong>:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">button</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-danger</span>&quot; (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onSave</span>($<span class="hljs-attr">event</span>)&quot;&gt;</span> Button <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Dan hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/15.bmp" alt=""></p>
+<ul>
+<li>Membuat method <code>onDivClick()</code> pada <strong>courses.component.ts</strong>:</li>
+</ul>
+<p><img src="img/04/16.bmp" alt=""></p>
+<ul>
+<li>Menambahkan div dan event binding pada div element:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onDivClick</span>($<span class="hljs-attr">event</span>)&quot;&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">button</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-danger</span>&quot; (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onSave</span>($<span class="hljs-attr">event</span>)&quot;&gt;</span> Button <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/17.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: Console.log muncul 2 pesan ya itu mengenali method onDivClick() dan onSave() jadi kedua method akan terpanggil dalam ketukan pada button.</p>
+</blockquote>
+<ul>
+<li>Untuk mengatasi event bubbling, tambahkan <code>$event.stopPropagation</code> pada file <strong>courses.component.ts</strong>:</li>
+</ul>
+<p><img src="img/04/18.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/19.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: Kegunaan dari stopPropagation() adalah untuk mengatasi terjadinya pengenalan pada event method selanjutnya (hanya pada parent method).</p>
+</blockquote>
+<h2 id="praktikum---bagian-6-event-filtering">Praktikum - Bagian 6: Event Filtering</h2>
+<ul>
+<li>Membuat inputan pada <strong>courses.component.html</strong> seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">text</span>&quot; (<span class="hljs-attr">keyup.enter</span>) = &quot;<span class="hljs-attr">onKeyUp</span>()&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Menambahkan method <code>onKeyUp</code>:</li>
+</ul>
+<p><img src="img/04/20.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/21.bmp" alt=""></p>
+<h2 id="praktikum---bagian-7-template-variable">Praktikum - Bagian 7: Template Variable</h2>
+<ul>
+<li>Menambahkan variabel <code>#nama</code> pada <strong>courses.component.html</strong> :</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">text</span>&quot; #<span class="hljs-attr">nama</span> (<span class="hljs-attr">keyup.enter</span>) = &quot;<span class="hljs-attr">onKeyUp</span>(<span class="hljs-attr">nama.value</span>)&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Menambahkan parameter nama pada method <code>onKeyUp()</code>:</li>
+</ul>
+<p><img src="img/04/22.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/23.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: Jika kolom input diisi dengan text, lalu tekan enter, maka isi dari kolom tersebut akan muncul di console.</p>
+</blockquote>
+<h2 id="praktikum---bagian-8-two-way-binding">Praktikum - Bagian 8: Two Way Binding</h2>
+<ul>
+<li>Membuat property baru dengan nama dan rubah parameter pada <code>console.log</code>:</li>
+</ul>
+<p><img src="img/04/24.bmp" alt=""></p>
+<ul>
+<li>Menambahkan parameter nama pada method <code>onKeyUp()</code>:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">text</span>&quot; [<span class="hljs-attr">value</span>] = &apos;<span class="hljs-attr">nama</span>&apos; (<span class="hljs-attr">keyup.enter</span>) = &quot;<span class="hljs-attr">nama</span> = $<span class="hljs-attr">event.target.value</span>;<span class="hljs-attr">onKeyUp</span>()&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/25.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: Isi dari atrribute nama akan di tampilkan pada kolom input dengan <code>$event.target.value</code>.</p>
+</blockquote>
+<ul>
+<li>Buka file <strong>app.module.ts</strong> dan menambahkan formmodule seperti berikut:</li>
+</ul>
+<p><img src="img/04/26.bmp" alt=""></p>
+<ul>
+<li>Buka <strong>courses.component.html</strong>, lalu memodifikasi codenya seperti berikut:</li>
+</ul>
+<p><img src="img/04/27.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/28.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: ngModel membuat form control dari sebuah domain dan akan mem-bind menjadi form control element. (Untuk soal 11 dan 12 perbedaannya adalah pada soal 11 tidak terdapat ng-reflect-model, sedangkan 12 ada ng-reflect-model yang mana kolom tersebut sudah menjadi FormControl).</p>
+</blockquote>
 
                                 
                                 </section>
@@ -310,7 +454,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"04. Displaying Data And Binding Data","level":"1.4","depth":1,"previous":{"title":"03. Angular Fundamental","level":"1.3","depth":1,"path":"03. Angular Fundamental.md","ref":"03. Angular Fundamental.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04. Displaying Data And Binding Data.md","mtime":"2019-02-28T15:07:45.599Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-28T14:51:29.530Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"04. Displaying Data And Binding Data","level":"1.4","depth":1,"previous":{"title":"03. Angular Fundamental","level":"1.3","depth":1,"path":"03. Angular Fundamental.md","ref":"03. Angular Fundamental.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04. Displaying Data And Binding Data.md","mtime":"2019-03-03T07:41:14.763Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T07:41:53.465Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
