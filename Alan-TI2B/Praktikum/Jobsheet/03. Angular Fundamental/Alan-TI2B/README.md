@@ -146,7 +146,7 @@ export class CoursesComponent implements OnInit {
 
 * Hasilnya seperti berikut:
 
-![](img/03/14.bmp)
+![](img/03/11.bmp)
 
 * Menambahkan constructor seperti berikut:
 
@@ -168,7 +168,7 @@ export class CoursesComponent implements OnInit {
   Courses;
 
   constructor(private service:CoursesService) { 
-    this.Courses = service.getCourses;
+    this.Courses = service.getCourses();
   }
 
   ngOnInit() {
@@ -179,4 +179,5 @@ export class CoursesComponent implements OnInit {
 
 * Hasilnya seperti berikut:
 
-![](img/03/14.bmp)
+![](img/03/11.bmp)
+
