@@ -339,9 +339,45 @@
 <p><img src="img/05/7.bmp" alt=""></p>
 <h2 id="ngfor">ngFor</h2>
 <ul>
-<li>Buka file <strong>app.component.ts</strong> kemudian tambahkan code berikut di method export class:</li>
+<li>Buka file <strong>app.component.ts</strong> kemudian menambahkan code berikut di method export class:</li>
 </ul>
 <p><img src="img/05/8.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.html</strong> kemudian menambahkan directive ngFor pada element li:</li>
+</ul>
+<p><img src="img/05/9.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/05/10.bmp" alt=""></p>
+<ul>
+<li>Memberi tanda pada index yang bernilai ganjil dengan menggunakan isEven</li>
+</ul>
+<p><img src="img/05/11.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/05/12.bmp" alt=""></p>
+<ul>
+<li>Menambahkan method <code>onAdd</code> pada file <strong>app.component.ts</strong></li>
+</ul>
+<pre><code class="lang-typescript">onAdd(){
+    <span class="hljs-keyword">this</span>.coursesFor.push({id:<span class="hljs-number">6</span>,name:<span class="hljs-string">&apos;courses6&apos;</span>})
+  }
+</code></pre>
+<ul>
+<li>Menambahkan button add pada file <strong>app.component.html</strong></li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onAdd()&quot;</span>&gt;</span>add<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut (button add):</li>
+</ul>
+<p><img src="img/05/13.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut (klik button add):</li>
+</ul>
+<p><img src="img/05/13.bmp" alt=""></p>
 
                                 
                                 </section>
@@ -381,7 +417,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"05. Directive","level":"1.5","depth":1,"previous":{"title":"04. Displaying Data And Binding Data","level":"1.4","depth":1,"path":"04. Displaying Data And Binding Data.md","ref":"04. Displaying Data And Binding Data.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"05. Directive.md","mtime":"2019-03-13T06:54:49.462Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T06:50:54.909Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"05. Directive","level":"1.5","depth":1,"previous":{"title":"04. Displaying Data And Binding Data","level":"1.4","depth":1,"path":"04. Displaying Data And Binding Data.md","ref":"04. Displaying Data And Binding Data.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"05. Directive.md","mtime":"2019-03-15T03:46:31.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-15T03:09:55.836Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

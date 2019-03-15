@@ -14,7 +14,7 @@
   no courses yet
 </div> -->
 
-<ul class = "nav nav-pills">
+<!-- <ul class = "nav nav-pills">
   <li class = "nav-item">
     <a
       (click) = "viewMode = 'map'"
@@ -36,7 +36,15 @@
   <div *ngSwitchCase = "'map'">Map View Content</div>
   <div *ngSwitchCase = "'list'">List View Content</div>
   <div *ngSwitchDefault>Other</div>
-</div>
+</div> -->
+
+<button (click)="onAdd()">add</button>
+<ul>
+  <li *ngFor="let item of coursesFor; even as isEven">
+    {{item.name}}
+    <span *ngIf = "isEven">(Even)</span>
+  </li>
+</ul>
 
 <router-outlet></router-outlet>
 

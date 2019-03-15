@@ -18,4 +18,8 @@ export class AppComponent {
   ]
 
   viewMode = 'map';
+
+  onAdd(){
+    this.coursesFor.push({id:6,name:'courses6'})
+  }
 }
