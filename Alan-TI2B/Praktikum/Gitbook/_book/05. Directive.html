@@ -1,0 +1,600 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>05. Directive · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="04. Displaying Data And Binding Data.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02. Typescript.html">
+            
+                <a href="02. Typescript.html">
+            
+                    
+                    02. Typescript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03. Angular Fundamental.html">
+            
+                <a href="03. Angular Fundamental.html">
+            
+                    
+                    03. Angular Fundamental
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04. Displaying Data And Binding Data.html">
+            
+                <a href="04. Displaying Data And Binding Data.html">
+            
+                    
+                    04. Displaying Data And Binding Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="05. Directive.html">
+            
+                <a href="05. Directive.html">
+            
+                    
+                    05. Directive
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >05. Directive</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="05-directive">05. Directive</h1>
+<h2 id="ngif">ngIf</h2>
+<ul>
+<li>Buka file <strong>app.component.ts</strong> lalu tambahkan code berikut:</li>
+</ul>
+<pre><code class="lang-typescript">  title = <span class="hljs-string">&apos;belajar-angular&apos;</span>;
+  courses = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>];
+</code></pre>
+<ul>
+<li>Buka file <strong>app.component.html</strong> lalu edit seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span> = &quot;<span class="hljs-attr">courses.length</span> &gt;</span> 0&quot;&gt;
+  list of courses
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span> = &quot;<span class="hljs-attr">courses.length</span> =<span class="hljs-string">=</span> <span class="hljs-attr">0</span>&quot;&gt;</span>
+  no courses yet
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/05/1.bmp" alt=""></p>
+<ul>
+<li><p>Pada array pada file <strong>app.component.ts</strong> dikosongkan indeksnya seperti berikut</p>
+<p><code>courses = [];</code></p>
+</li>
+<li><p>Hasilnya seperti berikut:</p>
+</li>
+</ul>
+<p><img src="img/05/2.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.html</strong> edit codenya seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span> = &quot;<span class="hljs-attr">courses.length</span> &gt;</span>  0; else noCourses&quot;&gt;
+  list of courses
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">noCourses</span>&gt;</span>
+  no course yet
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+</code></pre>
+<ul>
+<li><p>Menjalankan localhost dengan kondisi array kosong</p>
+<p><code>courses = [];</code></p>
+</li>
+<li><p>Hasilnya seperti berikut:</p>
+</li>
+</ul>
+<p><img src="img/05/2.bmp" alt=""></p>
+<ul>
+<li><p>Kemudian isi dengan array</p>
+<p><code>courses = [1,2];</code></p>
+</li>
+<li><p>Hasilnya seperti berikut:</p>
+</li>
+</ul>
+<p><img src="img/05/1.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.html</strong> edit kodenya seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span> = &quot;<span class="hljs-attr">courses.length</span> &gt;</span>  0; then coursesList else noCourses&quot;&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">coursesList</span>&gt;</span>
+  list of courses
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+</code></pre>
+<ul>
+<li><p>Menjalankan localhost dengan kondisi array pada file <strong>app.component.ts</strong> kosong</p>
+<p><code>courses = [];</code></p>
+</li>
+<li><p>Hasilnya seperti berikut:</p>
+</li>
+</ul>
+<p><img src="img/05/2.bmp" alt=""></p>
+<ul>
+<li><p>Kemudian isi dengan array</p>
+<p><code>courses = [1,2];</code></p>
+</li>
+<li><p>Hasilnya seperti berikut:</p>
+</li>
+</ul>
+<p><img src="img/05/1.bmp" alt=""></p>
+<h2 id="hidden-property">Hidden Property</h2>
+<ul>
+<li>Buka file <strong>app.component.html</strong> kemudian tambahkan code berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">hidden</span>&gt;</span>
+  list courses list
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  no courses yet
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/05/2.bmp" alt=""></p>
+<ul>
+<li>Edit code pada file <strong>app.component.html</strong> seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">hidden</span>] = &quot;<span class="hljs-attr">courses.length</span> =<span class="hljs-string">=</span> <span class="hljs-attr">0</span>&quot;&gt;</span>
+  list courses list
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">hidden</span>] = &quot;<span class="hljs-attr">courses.length</span> &gt;</span> 0&quot;&gt;
+  no courses yet
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<ul>
+<li><p>Isi array pada file <strong>app.component.ts</strong></p>
+<p><code>courses = [1,2];</code></p>
+</li>
+<li><p>Hasilnya seperti berikut:</p>
+</li>
+</ul>
+<p><img src="img/05/3.bmp" alt=""></p>
+<ul>
+<li>Jika dilihat pada inspect element maka akan terlihat <strong>property hidden</strong> tidak terdapat <strong>kondisi true ataupun false</strong></li>
+</ul>
+<p><img src="img/05/4.bmp" alt=""></p>
+<ul>
+<li>Berbeda jika menggunakan <strong>ngIf</strong> terdapat <strong>bindings</strong> dengan nilai <strong>false</strong></li>
+</ul>
+<p><img src="img/05/5.bmp" alt=""></p>
+<h2 id="ngswitchcase">ngSwitchCase</h2>
+<ul>
+<li>Buka file <strong>app.component.html</strong> lalu edit codenya seperti berikut:</li>
+</ul>
+<p><img src="img/05/6.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.ts</strong> lalu tambahkan code seperti berikut:</li>
+</ul>
+<p><code>viewMode = &apos;map&apos;;</code></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/05/7.bmp" alt=""></p>
+<h2 id="ngfor">ngFor</h2>
+<ul>
+<li>Buka file <strong>app.component.ts</strong> kemudian menambahkan code berikut di method export class:</li>
+</ul>
+<p><img src="img/05/8.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.html</strong> kemudian menambahkan directive ngFor pada element li:</li>
+</ul>
+<p><img src="img/05/9.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/05/10.bmp" alt=""></p>
+<ul>
+<li>Memberi tanda pada index yang bernilai ganjil dengan menggunakan isEven</li>
+</ul>
+<p><img src="img/05/11.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/05/12.bmp" alt=""></p>
+<ul>
+<li>Menambahkan method <code>onAdd</code> pada file <strong>app.component.ts</strong></li>
+</ul>
+<pre><code class="lang-typescript">onAdd(){
+    <span class="hljs-keyword">this</span>.coursesFor.push({id:<span class="hljs-number">6</span>,name:<span class="hljs-string">&apos;courses6&apos;</span>})
+  }
+</code></pre>
+<ul>
+<li>Menambahkan button add pada file <strong>app.component.html</strong></li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onAdd()&quot;</span>&gt;</span>add<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut (button add):</li>
+</ul>
+<p><img src="img/05/13.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut (klik button add):</li>
+</ul>
+<p><img src="img/05/14.bmp" alt=""></p>
+<ul>
+<li>Menambahkan method <code>onRemove()</code> di bawah method <code>onAdd()</code>:</li>
+</ul>
+<pre><code class="lang-typescript">  onRemove(item) {
+    <span class="hljs-built_in">console</span>.log(item);
+    <span class="hljs-keyword">let</span> index = <span class="hljs-keyword">this</span>.coursesFor.indexOf(item);
+    <span class="hljs-built_in">console</span>.log(index);
+    <span class="hljs-keyword">this</span>.coursesFor.splice(index, <span class="hljs-number">1</span>);
+  }
+</code></pre>
+<ul>
+<li>Menambahkan button remove pada <strong>app.component.html</strong></li>
+</ul>
+<pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onRemove</span>(<span class="hljs-attr">item</span>)&quot;&gt;</span>remove<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/05/15.JPG" alt=""></p>
+<ul>
+<li>Courses 5 terhapus setelah meng-klik remove:</li>
+</ul>
+<p><img src="img/05/16.JPG" alt=""></p>
+<ul>
+<li>Menambahkan method <code>onChange()</code> pada <strong>app.component.ts</strong></li>
+</ul>
+<pre><code class="lang-typescript">  onChange(item) {
+    item.name = <span class="hljs-string">&apos;Updated&apos;</span>;
+  }
+</code></pre>
+<ul>
+<li>Mengganti button remove dengan update pada <strong>app.component.html</strong></li>
+</ul>
+<p><code>&lt;button (click) = &quot;onChange(item)&quot;&gt;update&lt;/button&gt;</code></p>
+<h2 id="ngfor-dan-trackby">ngFor dan trackby</h2>
+<ul>
+<li>Membuat property <code>coursesForOne</code> dan method <code>loadCourses()</code> pada <strong>app.component.ts</strong></li>
+</ul>
+<p><img src="img/05/17.JPG" alt=""></p>
+<ul>
+<li>Membuat button <strong>Tampilkan Data</strong> pada <strong>app.component.html</strong></li>
+</ul>
+<p><img src="img/05/18.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti ini</li>
+</ul>
+<p><img src="img/05/19.bmp" alt=""></p>
+<ul>
+<li>Muncul tag ul jika <strong>Tampilkan Data</strong> di klik </li>
+</ul>
+<p><img src="img/05/20.bmp" alt=""></p>
+<ul>
+<li>Membuat method <code>trackCourse()</code> pada <strong>app.component.ts</strong></li>
+</ul>
+<pre><code class="lang-typescript">  trackCourse(index,itemone) {
+    <span class="hljs-keyword">return</span> itemone ? itemone.id : <span class="hljs-literal">undefined</span>;
+  }
+</code></pre>
+<ul>
+<li>Meng-edit ngFor pada <strong>app.component.html</strong></li>
+</ul>
+<p><img src="img/05/21.bmp" alt=""></p>
+<h2 id="the-leading-asterisk">The Leading Asterisk</h2>
+<ul>
+<li>Menambahkan code pada <strong>app.component.html</strong></li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;courses.length &gt; 0&quot;</span>&gt;</span>
+  list of courses
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Menambahkan <code>&lt;ng-template&gt;</code> pada <strong>app.component.html</strong></li>
+</ul>
+<p><img src="img/05/22.bmp" alt=""></p>
+<h2 id="ngclass">ngClass</h2>
+<ul>
+<li>Membuat 2 class binding <code>fa-star</code> dan <code>fa-star-o</code></li>
+</ul>
+<p><img src="img/05/23.bmp" alt=""></p>
+<ul>
+<li>Membuat atrribute directive class untuk fa</li>
+</ul>
+<p><img src="img/05/24.bmp" alt=""></p>
+<h2 id="custom-directive">Custom Directive</h2>
+<ul>
+<li>Membuat directive dengan nama <strong>input-format</strong></li>
+</ul>
+<p><img src="img/05/18.JPG" alt=""></p>
+<ul>
+<li>Buka file <strong>app.module.ts</strong> memastikan pada @NgModel terdapat input-format yang sudah di buat</li>
+</ul>
+<p><img src="img/05/19.JPG" alt=""></p>
+<ul>
+<li>Buka file <strong>input-format.directive.ts</strong> kemudian menambahkan decorator HostListener</li>
+</ul>
+<p><img src="img/05/20.JPG" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.html</strong> kemudian menambahkan code berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+&amp;nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">appInputFormat</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasil ketika di klik pada textbox</li>
+</ul>
+<p><img src="img/05/21.JPG" alt=""></p>
+<ul>
+<li>Hasil ketika di klik di luar textbox</li>
+</ul>
+<p><img src="img/05/22.JPG" alt=""></p>
+<ul>
+<li>Menambah code pada <strong>input-format.directive.ts</strong> seperti berikut:</li>
+</ul>
+<p><img src="img/05/23.JPG" alt=""></p>
+<ul>
+<li>Memasukkan kalimat dengan huruf kapital kemudian tekan tab maka semua huruf akan berubah menjadi huruf kecil</li>
+</ul>
+<p><img src="img/05/24.JPG" alt="">
+<img src="img/05/25.JPG" alt=""></p>
+<ul>
+<li>Memodifikasi code pada <strong>input-format.directive.ts</strong></li>
+</ul>
+<p><img src="img/05/26.JPG" alt=""></p>
+<ul>
+<li>Menambah property binding pada file <strong>app.component.html</strong></li>
+</ul>
+<pre><code class="lang-html">&amp;nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">appInputFormat</span> [<span class="hljs-attr">format</span>] = &quot;&apos;<span class="hljs-attr">lowercase</span>&apos;&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Mengubah menjadi uppercase</li>
+</ul>
+<pre><code class="lang-html">&amp;nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">appInputFormat</span> [<span class="hljs-attr">format</span>] = &quot;&apos;<span class="hljs-attr">uppercase</span>&apos;&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Menambahkan decorator input dengan parameter <code>appInputFormat</code></li>
+</ul>
+<pre><code class="lang-typescript">  @Input(<span class="hljs-string">&apos;appInputFormat&apos;</span>)format;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04. Displaying Data And Binding Data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 04. Displaying Data And Binding Data">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05. Directive","level":"1.5","depth":1,"previous":{"title":"04. Displaying Data And Binding Data","level":"1.4","depth":1,"path":"04. Displaying Data And Binding Data.md","ref":"04. Displaying Data And Binding Data.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"05. Directive.md","mtime":"2019-03-20T04:54:19.477Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-20T04:54:35.717Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
