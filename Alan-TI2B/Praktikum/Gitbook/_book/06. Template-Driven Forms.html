@@ -1,0 +1,426 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>06. Template-Driven Forms · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="05. Directive.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02. Typescript.html">
+            
+                <a href="02. Typescript.html">
+            
+                    
+                    02. Typescript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03. Angular Fundamental.html">
+            
+                <a href="03. Angular Fundamental.html">
+            
+                    
+                    03. Angular Fundamental
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04. Displaying Data And Binding Data.html">
+            
+                <a href="04. Displaying Data And Binding Data.html">
+            
+                    
+                    04. Displaying Data And Binding Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05. Directive.html">
+            
+                <a href="05. Directive.html">
+            
+                    
+                    05. Directive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="06. Template-Driven Forms.html">
+            
+                <a href="06. Template-Driven Forms.html">
+            
+                    
+                    06. Template-Driven Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >06. Template-Driven Forms</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="06-template-driven-forms">06. Template-Driven Forms</h1>
+<h2 id="membuat-form-bootstrap">Membuat Form Bootstrap</h2>
+<ul>
+<li>Membuat component bernama contact</li>
+</ul>
+<p><img src="img/06/1.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian menambahkan code berikut:</li>
+</ul>
+<p><img src="img/06/2.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.html</strong> kemudian menambahkan code berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">app-contact</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">app-contact</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/3.bmp" alt=""></p>
+<h2 id="macam-macam-form">Macam-macam Form</h2>
+<ul>
+<li>Meng-generate 2 buah component dengan nama <strong>reactive-form</strong> dan <strong>template-driven</strong></li>
+</ul>
+<p><img src="img/06/4.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>reactive-form.component.html</strong> dan membuat code seperti berikut:</li>
+</ul>
+<p><img src="img/06/5.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.html</strong> kemudian menambahkan code berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">app-reactive-form</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">app-reactive-form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/6.bmp" alt=""></p>
+<ul>
+<li>Membuat interface dengan nama <strong>mahasiswa.interface.ts</strong> dan menambahkan code berikut</li>
+</ul>
+<pre><code class="lang-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> mahasiswa {
+    nama_mhs:<span class="hljs-built_in">string</span>;
+    pendidikan:{
+        nama_jurusan:<span class="hljs-built_in">string</span>;
+        nama_prodi:<span class="hljs-built_in">string</span>;
+    }
+}
+</code></pre>
+<ul>
+<li>Menambahkan <code>ReactiveFormsModule</code> dan <code>FormsGroup</code> pada <strong>app.module.ts</strong></li>
+</ul>
+<p><img src="img/06/7.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>reactive-forms.component.ts</strong> kemudian menambahkan code seperti berikut:</li>
+</ul>
+<p><img src="img/06/8.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>reactive-form.component.html</strong> kemudian ubah codenya seperti berikut:</li>
+</ul>
+<p><img src="img/06/9.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/10.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.module.ts</strong> kemudian menambahkan code seperti berikut:</li>
+</ul>
+<p><img src="img/06/11.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>template-driven.component.ts</strong> kemudian menambahkan code seperti berikut:</li>
+</ul>
+<p><img src="img/06/12.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>template-driven.component.ts</strong> kemudian menambahkan method <code>onSubmit()</code>:</li>
+</ul>
+<pre><code class="lang-typescript">  onSubmit() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;hasil inputan:&quot;</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.mahasiswa)
+  }
+</code></pre>
+<ul>
+<li>Buka file <strong>template-driven.component.html</strong> kemudian menambahkan code seperti berikut:</li>
+</ul>
+<p><img src="img/06/13.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>app.component.html</strong> kemudian ubah codenya seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">app-template-driven</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">app-template-driven</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/14.bmp" alt=""></p>
+<h2 id="ngmodel">ngModel</h2>
+<ul>
+<li>Buka file <strong>contact.component.ts</strong> kemudian menambahkan code seperti berikut:</li>
+</ul>
+<p><img src="img/06/15.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian ubah codenya seperti berikut:</li>
+</ul>
+<p><img src="img/06/16.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/17.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian menambahkan code seperti berikut:</li>
+</ul>
+<p><img src="img/06/18.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/19.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>contact.component.ts</strong> tambahkan code seperti berikut:</li>
+</ul>
+<pre><code class="lang-typescript">  <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ContactComponent {
+    log(x) {
+      <span class="hljs-built_in">console</span>.log(x);
+    }
+  }
+</code></pre>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian ubah codenya seperti berikut:</li>
+</ul>
+<p><img src="img/06/20.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/21.bmp" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05. Directive.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 05. Directive">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"06. Template-Driven Forms","level":"1.6","depth":1,"previous":{"title":"05. Directive","level":"1.5","depth":1,"path":"05. Directive.md","ref":"05. Directive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06. Template-Driven Forms.md","mtime":"2019-03-20T09:00:56.972Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-20T08:50:25.067Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
