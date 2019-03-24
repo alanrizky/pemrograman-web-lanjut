@@ -1,27 +1,354 @@
-# AlanTI2B
+# 05. Directive
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+ngIf
+---
 
-## Development server
+* Buka file **app.component.ts** lalu tambahkan code berikut:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```typescript
+  title = 'belajar-angular';
+  courses = [1,2];
+```
 
-## Code scaffolding
+* Buka file **app.component.html** lalu edit seperti berikut:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```html
+<div *ngIf = "courses.length > 0">
+  list of courses
+</div>
 
-## Build
+<div *ngIf = "courses.length == 0">
+  no courses yet
+</div>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<router-outlet></router-outlet>
+```
 
-## Running unit tests
+* Hasilnya seperti berikut:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![](img/05/1.bmp)
 
-## Running end-to-end tests
+* Pada array pada file **app.component.ts** dikosongkan indeksnya seperti berikut
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+ `courses = [];`
 
-## Further help
+* Hasilnya seperti berikut:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![](img/05/2.bmp)
+
+* Buka file **app.component.html** edit codenya seperti berikut:
+
+```html
+<div *ngIf = "courses.length >  0; else noCourses">
+  list of courses
+</div>
+
+<ng-template #noCourses>
+  no course yet
+</ng-template>
+```
+
+* Menjalankan localhost dengan kondisi array kosong
+
+ `courses = [];`
+
+* Hasilnya seperti berikut:
+
+![](img/05/2.bmp)
+
+* Kemudian isi dengan array
+
+ `courses = [1,2];`
+
+* Hasilnya seperti berikut:
+
+![](img/05/1.bmp)
+
+* Buka file **app.component.html** edit kodenya seperti berikut:
+
+```html
+<div *ngIf = "courses.length >  0; then coursesList else noCourses"></div>
+<ng-template #coursesList>
+  list of courses
+</ng-template>
+```
+
+* Menjalankan localhost dengan kondisi array pada file **app.component.ts** kosong
+
+ `courses = [];`
+
+* Hasilnya seperti berikut:
+
+![](img/05/2.bmp)
+
+* Kemudian isi dengan array
+
+ `courses = [1,2];`
+
+* Hasilnya seperti berikut:
+
+![](img/05/1.bmp)
+
+Hidden Property
+---
+
+* Buka file **app.component.html** kemudian tambahkan code berikut:
+
+```html
+<div hidden>
+  list courses list
+</div>
+<div>
+  no courses yet
+</div>
+
+<router-outlet></router-outlet>
+```
+
+* Hasilnya seperti berikut:
+
+![](img/05/2.bmp)
+
+* Edit code pada file **app.component.html** seperti berikut:
+
+```html
+<div [hidden] = "courses.length == 0">
+  list courses list
+</div>
+<div [hidden] = "courses.length > 0">
+  no courses yet
+</div>
+```
+
+* Isi array pada file **app.component.ts**
+
+ `courses = [1,2];`
+
+* Hasilnya seperti berikut:
+
+![](img/05/3.bmp)
+
+* Jika dilihat pada inspect element maka akan terlihat **property hidden** tidak terdapat **kondisi true ataupun false**
+
+![](img/05/4.bmp)
+
+* Berbeda jika menggunakan **ngIf** terdapat **bindings** dengan nilai **false**
+
+![](img/05/5.bmp)
+
+ngSwitchCase
+---
+
+* Buka file **app.component.html** lalu edit codenya seperti berikut:
+
+![](img/05/6.bmp)
+
+* Buka file **app.component.ts** lalu tambahkan code seperti berikut:
+
+` viewMode = 'map'; `
+
+* Hasilnya seperti berikut:
+
+![](img/05/7.bmp)
+
+ngFor
+---
+
+* Buka file **app.component.ts** kemudian menambahkan code berikut di method export class:
+
+![](img/05/8.bmp)
+
+* Buka file **app.component.html** kemudian menambahkan directive ngFor pada element li:
+
+![](img/05/9.bmp)
+
+* Hasilnya seperti berikut:
+
+![](img/05/10.bmp)
+
+* Memberi tanda pada index yang bernilai ganjil dengan menggunakan isEven
+
+![](img/05/11.bmp)
+
+* Hasilnya seperti berikut:
+
+![](img/05/12.bmp)
+
+* Menambahkan method `onAdd` pada file **app.component.ts**
+
+```typescript
+onAdd(){
+    this.coursesFor.push({id:6,name:'courses6'})
+  }
+```
+
+* Menambahkan button add pada file **app.component.html**
+
+```html
+<button (click)="onAdd()">add</button>
+```
+
+* Hasilnya seperti berikut (button add):
+
+![](img/05/13.bmp)
+
+* Hasilnya seperti berikut (klik button add):
+
+![](img/05/14.bmp)
+
+* Menambahkan method ` onRemove() ` di bawah method `onAdd()`:
+
+```typescript
+  onRemove(item) {
+    console.log(item);
+    let index = this.coursesFor.indexOf(item);
+    console.log(index);
+    this.coursesFor.splice(index, 1);
+  }
+```
+
+* Menambahkan button remove pada **app.component.html**
+
+```html
+    <button (click) = "onRemove(item)">remove</button>
+```
+
+* Hasilnya seperti berikut:
+
+![](img/05/15.JPG)
+
+* Courses 5 terhapus setelah meng-klik remove:
+
+![](img/05/16.JPG)
+
+* Menambahkan method `onChange()` pada **app.component.ts**
+
+```typescript
+  onChange(item) {
+    item.name = 'Updated';
+  }
+```
+
+* Mengganti button remove dengan update pada **app.component.html**
+
+`<button (click) = "onChange(item)">update</button>`
+
+ngFor dan trackby
+---
+
+* Membuat property `coursesForOne` dan method `loadCourses()` pada **app.component.ts**
+
+![](img/05/17.JPG)
+
+* Membuat button **Tampilkan Data** pada **app.component.html**
+
+![](img/05/18.bmp)
+
+* Hasilnya seperti ini
+
+![](img/05/19.bmp)
+
+* Muncul tag ul jika **Tampilkan Data** di klik 
+
+![](img/05/20.bmp)
+
+* Membuat method `trackCourse()` pada **app.component.ts**
+
+```typescript
+  trackCourse(index,itemone) {
+    return itemone ? itemone.id : undefined;
+  }
+```
+
+* Meng-edit ngFor pada **app.component.html**
+
+![](img/05/21.bmp)
+
+The Leading Asterisk
+---
+
+* Menambahkan code pada **app.component.html**
+
+```html
+<div *ngIf="courses.length > 0">
+  list of courses
+</div>
+```
+
+* Menambahkan `<ng-template>` pada **app.component.html**
+
+![](img/05/22.bmp)
+
+ngClass
+---
+
+* Membuat 2 class binding ` fa-star ` dan ` fa-star-o `
+
+![](img/05/23.bmp)
+
+* Membuat atrribute directive class untuk fa
+
+![](img/05/24.bmp)
+
+Custom Directive
+---
+
+* Membuat directive dengan nama **input-format**
+
+![](img/05/18.JPG)
+
+* Buka file **app.module.ts** memastikan pada @NgModel terdapat input-format yang sudah di buat
+
+![](img/05/19.JPG)
+
+* Buka file **input-format.directive.ts** kemudian menambahkan decorator HostListener
+
+![](img/05/20.JPG)
+
+* Buka file **app.component.html** kemudian menambahkan code berikut:
+
+```html
+<br>
+&nbsp;<input type="text" appInputFormat>
+
+<router-outlet></router-outlet>
+```
+
+* Hasil ketika di klik pada textbox
+
+![](img/05/21.JPG)
+
+* Hasil ketika di klik di luar textbox
+
+![](img/05/22.JPG)
+
+* Menambah code pada **input-format.directive.ts** seperti berikut:
+
+![](img/05/23.JPG)
+
+* Memasukkan kalimat dengan huruf kapital kemudian tekan tab maka semua huruf akan berubah menjadi huruf kecil
+
+![](img/05/24.JPG)
+![](img/05/25.JPG)
+
+* Memodifikasi code pada **input-format.directive.ts**
+
+![](img/05/26.JPG)
+
+* Menambah property binding pada file **app.component.html**
+
+```html
+&nbsp;<input type="text" appInputFormat [format] = "'lowercase'">
+```
+
+* Mengubah menjadi uppercase
+
+```html
+&nbsp;<input type="text" appInputFormat [format] = "'uppercase'">
+```
+
+* Menambahkan decorator input dengan parameter `appInputFormat`
+
+```typescript
+  @Input('appInputFormat')format;
+```

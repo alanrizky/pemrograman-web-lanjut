@@ -344,6 +344,165 @@
 <li>Hasilnya seperti berikut:</li>
 </ul>
 <p><img src="img/06/21.bmp" alt=""></p>
+<h2 id="validasi">Validasi</h2>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian menambahkan code berikut:</li>
+</ul>
+<p><img src="img/06/22.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/23.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian menambahkan code berikut:</li>
+</ul>
+<pre><code class="lang-html">        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> 
+        <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">alert</span> <span class="hljs-attr">alert-danger</span>&quot; 
+        *<span class="hljs-attr">ngIf</span> = &quot;<span class="hljs-attr">firstName.touched</span> &amp;&amp;!<span class="hljs-attr">firstName.valid</span>&quot;
+        &gt;</span>
+          Nama harus diisi
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut, jika di klik maka akan muncul alert:</li>
+</ul>
+<p><img src="img/06/24.bmp" alt=""></p>
+<h2 id="spesific-validasi-error">Spesific validasi error</h2>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian menambahkan beberapa code berikut:</li>
+</ul>
+<p><img src="img/06/25.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/26.bmp" alt=""></p>
+<ul>
+<li>Hasil inspect element:</li>
+</ul>
+<p><img src="img/06/27.bmp" alt=""></p>
+<h2 id="stylish-invalid-input-field">Stylish Invalid input field</h2>
+<ul>
+<li>Buka file <strong>contact.component.css</strong> kemudian tambahkan code berikut:</li>
+</ul>
+<pre><code class="lang-css"><span class="hljs-selector-class">.form-control</span><span class="hljs-selector-class">.ng-touched</span><span class="hljs-selector-class">.ng-invalid</span> {
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">4px</span> solid red;
+}
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/28.bmp" alt=""></p>
+<h2 id="ngform">ngForm</h2>
+<ul>
+<li>Buka file <strong>contact.component.ts</strong> kemudian menambahkan sebuah method submit seperti berikut:</li>
+</ul>
+<p><img src="img/06/29.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> dan membuat variable template <code>ngForm</code> atau property <code>ngForm</code> dengan nama <code>(#form)</code>.</li>
+</ul>
+<pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">form</span> = &quot;<span class="hljs-attr">ngForm</span>&quot; (<span class="hljs-attr">ngSubmit</span>) = &quot;<span class="hljs-attr">submit</span>(<span class="hljs-attr">form</span>)&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Pada button rubah codenya menjadi seperti berikut</li>
+</ul>
+<pre><code class="lang-html">      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">submit</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-primary</span>&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/30.bmp" alt=""></p>
+<h2 id="ngmodelgroup">ngModelGroup</h2>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian menambahkan code seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ngModelGroup</span> = &quot;<span class="hljs-attr">contact</span>&quot; #<span class="hljs-attr">contact</span> = &quot;<span class="hljs-attr">ngModelGroup</span>&quot;&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span> = &quot;!<span class="hljs-attr">contact.valid</span>&quot;&gt;</span>contoh validasi pada ngModelGroup<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<h2 id="disabling-the-submit-button">Disabling the submit button</h2>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian tambahkan code berikut pada tag button:</li>
+</ul>
+<pre><code class="lang-html">      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">submit</span>&quot; [<span class="hljs-attr">disabled</span>] = &quot;!<span class="hljs-attr">form.valid</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-primary</span>&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/31.bmp" alt=""></p>
+<ul>
+<li>Jika nama diisi maka button akan enable:</li>
+</ul>
+<p><img src="img/06/32.bmp" alt=""></p>
+<h2 id="bekerja-dengan-check-box">Bekerja dengan check box</h2>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> dan menambahkan code <code>check box</code> seperti pada berikut:</li>
+</ul>
+<pre><code class="lang-html">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">checkbox</span>&quot;&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span> = &quot;&quot;&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">checkbox</span>&quot; <span class="hljs-attr">ngModel</span> <span class="hljs-attr">name</span> = &quot;<span class="hljs-attr">isSubscribe</span>&quot;&gt;</span>Subscribe jika ingin berlangganan
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/33.bmp" alt=""></p>
+<h2 id="bekerja-dengan-drop-down-list">Bekerja dengan drop-down list</h2>
+<ul>
+<li>Buka file <strong>contact.component.ts</strong> kemudian menambahkan method <code>contactMethods</code></li>
+</ul>
+<pre><code class="lang-typescript">    contactMethods=[
+      {id:<span class="hljs-number">1</span>, name:<span class="hljs-string">&apos;email&apos;</span>},
+      {id:<span class="hljs-number">2</span>, name:<span class="hljs-string">&apos;phone&apos;</span>}
+    ]
+</code></pre>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> kemudian menambahkan code seperti berikut:</li>
+</ul>
+<p><img src="img/06/34.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/35.bmp" alt=""></p>
+<ul>
+<li>Menggunakan <code>[ngValue]</code></li>
+</ul>
+<pre><code class="lang-html">          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> *<span class="hljs-attr">ngFor</span> = &quot;<span class="hljs-attr">let</span> <span class="hljs-attr">method</span> <span class="hljs-attr">of</span> <span class="hljs-attr">contactMethods</span>&quot; [<span class="hljs-attr">ngValue</span>] = &quot;<span class="hljs-attr">method</span>&quot;&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/36.bmp" alt=""></p>
+<ul>
+<li>Menggunakan <code>multiple</code></li>
+</ul>
+<pre><code class="lang-html">        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">ngModel</span> <span class="hljs-attr">name</span> = &quot;<span class="hljs-attr">contactMethod</span>&quot; <span class="hljs-attr">id</span> = &quot;<span class="hljs-attr">contactMethod</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">form-control</span>&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/37.bmp" alt=""></p>
+<h2 id="bekerja-dengan-radio-button">Bekerja dengan radio button</h2>
+<ul>
+<li>Buka file <strong>contact.component.html</strong> dan menambahkan code seperti berikut:</li>
+</ul>
+<p><img src="img/06/38.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/39.bmp" alt=""></p>
+<ul>
+<li>Tidak menggunakan <code>ngModel</code></li>
+</ul>
+<p><img src="img/06/40.bmp" alt=""></p>
+<ul>
+<li>Menggunakan <code>ngFor</code></li>
+</ul>
+<p><img src="img/06/41.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/06/42.bmp" alt=""></p>
 
                                 
                                 </section>
@@ -383,7 +542,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"06. Template-Driven Forms","level":"1.6","depth":1,"previous":{"title":"05. Directive","level":"1.5","depth":1,"path":"05. Directive.md","ref":"05. Directive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06. Template-Driven Forms.md","mtime":"2019-03-20T09:00:56.972Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-20T08:50:25.067Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"06. Template-Driven Forms","level":"1.6","depth":1,"previous":{"title":"05. Directive","level":"1.5","depth":1,"path":"05. Directive.md","ref":"05. Directive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06. Template-Driven Forms.md","mtime":"2019-03-24T14:39:21.416Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-24T13:21:35.032Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
