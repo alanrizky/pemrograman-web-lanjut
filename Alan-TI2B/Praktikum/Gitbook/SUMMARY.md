@@ -7,5 +7,6 @@
 * [05. Directive](05. Directive.md)
 * [06. Template-Driven Forms](06. Template-Driven Forms.md)
 * [08. Reactive Form](08. Reactive Form.md)
+* [09. HTTP Services](09. HTTP Services.md)
 
 
