@@ -1,27 +1,112 @@
-# AlanTI2B
+# 09. HTTP Services
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+Praktikum - Bagian 1: JSONPlaceHolder
+---
 
-## Development server
+* Membuka website http://jsonplaceholder.typicode.com/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![](img/09/1.bmp)
 
-## Code scaffolding
+Praktikum - Bagian 2: Getting Data
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Membuat component baru dengan nama posts dengan perintah `ng g c posts`
 
-## Build
+![](img/09/2.bmp)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Import HTTP Module pada file **app.module.ts**
 
-## Running unit tests
+![](img/09/3.bmp)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Memodifikasi file **posts.component.ts** menjadi seperti berikut:
 
-## Running end-to-end tests
+![](img/09/4.bmp)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Memodifikasi file **posts.component.html** menjadi seperti berikut:
 
-## Further help
+![](img/09/5.bmp)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Hasilnya seperti berikut:
+
+![](img/09/6.bmp)
+
+* Meng-comment `HttpModule` pada file **app.module.ts**
+
+![](img/09/7.bmp)
+
+* Error akan muncul seperti berikut:
+
+![](img/09/8.bmp)
+
+> Penjelasan karena `HttpModule` dihapus, maka provider akan mencari http module
+
+* Memperbaiki code pada file **posts.component.ts** menjadi seperti berikut:
+
+![](img/09/9.bmp)
+
+* Error akan muncul seperti berikut:
+
+![](img/09/10.bmp)
+
+> Penjelasan karena `HttpModule` dihapus, maka provider akan mencari http module
+
+* Memodifikasi file **posts.component.html** menjadi seperti berikut:
+
+![](img/09/11.bmp)
+
+* Memodifikasi file **posts.component.ts** menjadi seperti berikut:
+
+![](img/09/12.bmp)
+
+* Hasilnya seperti berikut:
+
+![](img/09/13.bmp)
+
+Praktikum - Bagian 3: Creating Data
+---
+
+* Menambahkan code pada file **posts.component.html** menjadi seperti berikut:
+
+![](img/09/14.bmp)
+
+* Memodifikasi file **posts.component.ts** menjadi seperti berikut:
+
+![](img/09/15.bmp)
+
+* Hasilnya seperti berikut:
+
+![](img/09/16.bmp)
+
+Praktikum - Bagian 4: Updating Data
+---
+
+* Menambahkan code pada file **posts.component.ts** menjadi seperti berikut:
+
+![](img/09/17.bmp)
+
+* Menambahkan code pada file **posts.component.html** menjadi seperti berikut:
+
+![](img/09/18.bmp)
+
+* Hasilnya seperti berikut:
+
+![](img/09/19.bmp)
+
+> patch adalah untuk merequest http method
+
+Praktikum - Bagian 5: Deleting Data
+---
+
+* Menambahkan code pada file **posts.component.ts** seperti berikut:
+
+![](img/09/20.bmp)
+
+* Menambahkan code pada file **posts.component.html** menjadi seperti berikut:
+
+![](img/09/21.bmp)
+
+* Hasilnya seperti berikut:
+
+![](img/09/22.bmp)
+
+> Menghapus element dari sebuah array dan, jika perlu, memasukkan element baru di tempat tersebut, mengembalikan element yang sudah dihapus.
