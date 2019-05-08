@@ -1,0 +1,594 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04. Displaying Data And Binding Data · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05. Directive.html" />
+    
+    
+    <link rel="prev" href="03. Angular Fundamental.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02. Typescript.html">
+            
+                <a href="02. Typescript.html">
+            
+                    
+                    02. Typescript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03. Angular Fundamental.html">
+            
+                <a href="03. Angular Fundamental.html">
+            
+                    
+                    03. Angular Fundamental
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="04. Displaying Data And Binding Data.html">
+            
+                <a href="04. Displaying Data And Binding Data.html">
+            
+                    
+                    04. Displaying Data And Binding Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05. Directive.html">
+            
+                <a href="05. Directive.html">
+            
+                    
+                    05. Directive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06. Template-Driven Forms.html">
+            
+                <a href="06. Template-Driven Forms.html">
+            
+                    
+                    06. Template-Driven Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="08. Reactive Form.html">
+            
+                <a href="08. Reactive Form.html">
+            
+                    
+                    08. Reactive Form
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="09. HTTP Services.html">
+            
+                <a href="09. HTTP Services.html">
+            
+                    
+                    09. HTTP Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="10. Routes.html">
+            
+                <a href="10. Routes.html">
+            
+                    
+                    10. Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="11. Authentication and Authorization.html">
+            
+                <a href="11. Authentication and Authorization.html">
+            
+                    
+                    11. Authentication and Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="12. Deployment.html">
+            
+                <a href="12. Deployment.html">
+            
+                    
+                    12. Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >04. Displaying Data And Binding Data</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="04-displaying-data-and-binding-data">04. Displaying Data And Binding Data</h1>
+<h2 id="praktikum---bagian-1-component-basic">Praktikum - Bagian 1: Component Basic</h2>
+<ul>
+<li>Buka file <strong>courses.component.ts</strong> kemudian tambahkan code seperti berikut:</li>
+</ul>
+<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { Component, OnInit } from <span class="hljs-string">&apos;@angular/core&apos;</span>;
+<span class="hljs-keyword">import</span> { CoursesService } from <span class="hljs-string">&apos;../courses.service&apos;</span>;
+
+@Component({
+  selector: <span class="hljs-string">&apos;app-courses&apos;</span>,
+  templateUrl: <span class="hljs-string">&apos;./courses.component.html&apos;</span>,
+  styleUrls: [<span class="hljs-string">&apos;./courses.component.css&apos;</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CoursesComponent <span class="hljs-keyword">implements</span> OnInit {
+
+  Title = <span class="hljs-string">&apos;Belajar Angular&apos;</span>;
+  Courses;
+
+  binding = <span class="hljs-string">&apos;property-binding&apos;</span>;
+  imageUrl = <span class="hljs-string">&apos;http://lorempixel.com/400/200&apos;</span>;
+
+  <span class="hljs-keyword">constructor</span>(private service:CoursesService) { 
+    <span class="hljs-keyword">this</span>.Courses = service.getCourses;
+  }
+
+  ngOnInit() {
+  }
+
+}
+</code></pre>
+<ul>
+<li>Buka file <strong>courses.component.html</strong> lalu tambahkan code seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>
+      #ID
+    <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Course name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> *<span class="hljs-attr">ngFor</span> = &quot;<span class="hljs-attr">let</span> <span class="hljs-attr">Course</span> <span class="hljs-attr">of</span> <span class="hljs-attr">Courses</span>&quot;&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> [<span class="hljs-attr">textContent</span>]=<span class="hljs-string">&apos;binding&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> [<span class="hljs-attr">src</span>]=<span class="hljs-string">&quot;imageUrl&quot;</span> /&gt;</span>
+</code></pre>
+<ul>
+<li>Lalu hasilnya seperti ini:</li>
+</ul>
+<p><img src="img/04/1.bmp" alt=""></p>
+<h2 id="praktikum---bagian-2-attribute-binding">Praktikum - Bagian 2: Attribute Binding</h2>
+<ul>
+<li>Buka file <strong>courses.component.ts</strong> kemudian tambahkan property colspan dibawah line imageUrl seperti berikut:</li>
+</ul>
+<p><img src="img/04/2.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>courses.component.html</strong> kemudian menambah code berikut:</li>
+</ul>
+<p><img src="img/04/3.bmp" alt=""></p>
+<ul>
+<li>Lalu error akan muncul seperti ini:</li>
+</ul>
+<p><img src="img/04/4.bmp" alt=""></p>
+<ul>
+<li>Menambahkan code untuk memperbaiki error seperti berikut:</li>
+</ul>
+<p><img src="img/04/5.bmp" alt=""></p>
+<ul>
+<li>Kemudian menambah button pada file <strong>courses.component.html</strong> seperti berikut:</li>
+</ul>
+<p><img src="img/04/6.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/7.bmp" alt=""></p>
+<h2 id="praktikum---bagian-3-class-bagian">Praktikum - Bagian 3: Class Bagian</h2>
+<ul>
+<li>Buka file <strong>courses.component.ts</strong> kemudian menambah propery <code>isActive =  true</code> setelah line <code>colspan = 2;</code>.</li>
+</ul>
+<p><img src="img/04/8.bmp" alt=""></p>
+<ul>
+<li>Kemudian rubah <code>isActive</code> menjadi <strong>false</strong> dan inspect element maka kondisi active akan hilang.</li>
+</ul>
+<blockquote>
+<p>Mengubah <code>isActive</code> menjadi false.</p>
+</blockquote>
+<p><img src="img/04/9.bmp" alt=""> </p>
+<ul>
+<li>Hasilnya seperti berikut: </li>
+</ul>
+<p><img src="img/04/10.bmp" alt=""></p>
+<h2 id="praktikum---bagian-4-style-binding">Praktikum - Bagian 4: Style Binding</h2>
+<ul>
+<li>Buka file <strong>courses.component.html</strong> kemudian menambah kode berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &apos;<span class="hljs-attr">button</span>&apos; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-primary</span>&quot; [<span class="hljs-attr">style.backgroundColor</span>] = &quot;<span class="hljs-attr">isActive</span>?&apos;<span class="hljs-attr">blue</span>&apos;<span class="hljs-attr">:</span>&apos;<span class="hljs-attr">white</span>&apos;&quot; &gt;</span> Tambah <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut</li>
+</ul>
+<p><img src="img/04/11.bmp" alt=""></p>
+<h2 id="praktikum---bagian-5-event-binding">Praktikum - Bagian 5: Event Binding</h2>
+<ul>
+<li>Buka file <strong>courses.component.ts</strong> lalu membuat method dengan nama <code>onSave()</code>.</li>
+</ul>
+<p><img src="img/04/12.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>courses.component.html</strong> lalu menambahkan even click.</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">button</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-default</span>&quot; (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onSave</span>()&quot;&gt;</span> Button <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/13.bmp" alt=""></p>
+<ul>
+<li>Buka file <strong>courses.component.ts</strong> kemudian menambahkan event <code>$event</code>.</li>
+</ul>
+<p><img src="img/04/14.bmp" alt=""></p>
+<ul>
+<li>Menambahkan code pada <strong>courses.component.html</strong>:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">button</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-danger</span>&quot; (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onSave</span>($<span class="hljs-attr">event</span>)&quot;&gt;</span> Button <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Dan hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/15.bmp" alt=""></p>
+<ul>
+<li>Membuat method <code>onDivClick()</code> pada <strong>courses.component.ts</strong>:</li>
+</ul>
+<p><img src="img/04/16.bmp" alt=""></p>
+<ul>
+<li>Menambahkan div dan event binding pada div element:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onDivClick</span>($<span class="hljs-attr">event</span>)&quot;&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">button</span>&quot; <span class="hljs-attr">class</span> = &quot;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-danger</span>&quot; (<span class="hljs-attr">click</span>) = &quot;<span class="hljs-attr">onSave</span>($<span class="hljs-attr">event</span>)&quot;&gt;</span> Button <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/17.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: Console.log muncul 2 pesan ya itu mengenali method onDivClick() dan onSave() jadi kedua method akan terpanggil dalam ketukan pada button.</p>
+</blockquote>
+<ul>
+<li>Untuk mengatasi event bubbling, tambahkan <code>$event.stopPropagation</code> pada file <strong>courses.component.ts</strong>:</li>
+</ul>
+<p><img src="img/04/18.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/19.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: Kegunaan dari stopPropagation() adalah untuk mengatasi terjadinya pengenalan pada event method selanjutnya (hanya pada parent method).</p>
+</blockquote>
+<h2 id="praktikum---bagian-6-event-filtering">Praktikum - Bagian 6: Event Filtering</h2>
+<ul>
+<li>Membuat inputan pada <strong>courses.component.html</strong> seperti berikut:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">text</span>&quot; (<span class="hljs-attr">keyup.enter</span>) = &quot;<span class="hljs-attr">onKeyUp</span>()&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Menambahkan method <code>onKeyUp</code>:</li>
+</ul>
+<p><img src="img/04/20.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/21.bmp" alt=""></p>
+<h2 id="praktikum---bagian-7-template-variable">Praktikum - Bagian 7: Template Variable</h2>
+<ul>
+<li>Menambahkan variabel <code>#nama</code> pada <strong>courses.component.html</strong> :</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">text</span>&quot; #<span class="hljs-attr">nama</span> (<span class="hljs-attr">keyup.enter</span>) = &quot;<span class="hljs-attr">onKeyUp</span>(<span class="hljs-attr">nama.value</span>)&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Menambahkan parameter nama pada method <code>onKeyUp()</code>:</li>
+</ul>
+<p><img src="img/04/22.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/23.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: Jika kolom input diisi dengan text, lalu tekan enter, maka isi dari kolom tersebut akan muncul di console.</p>
+</blockquote>
+<h2 id="praktikum---bagian-8-two-way-binding">Praktikum - Bagian 8: Two Way Binding</h2>
+<ul>
+<li>Membuat property baru dengan nama dan rubah parameter pada <code>console.log</code>:</li>
+</ul>
+<p><img src="img/04/24.bmp" alt=""></p>
+<ul>
+<li>Menambahkan parameter nama pada method <code>onKeyUp()</code>:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span> = &quot;<span class="hljs-attr">text</span>&quot; [<span class="hljs-attr">value</span>] = &apos;<span class="hljs-attr">nama</span>&apos; (<span class="hljs-attr">keyup.enter</span>) = &quot;<span class="hljs-attr">nama</span> = $<span class="hljs-attr">event.target.value</span>;<span class="hljs-attr">onKeyUp</span>()&quot;&gt;</span>
+</code></pre>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/25.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: Isi dari atrribute nama akan di tampilkan pada kolom input dengan <code>$event.target.value</code>.</p>
+</blockquote>
+<ul>
+<li>Buka file <strong>app.module.ts</strong> dan menambahkan formmodule seperti berikut:</li>
+</ul>
+<p><img src="img/04/26.bmp" alt=""></p>
+<ul>
+<li>Buka <strong>courses.component.html</strong>, lalu memodifikasi codenya seperti berikut:</li>
+</ul>
+<p><img src="img/04/27.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/04/28.bmp" alt=""></p>
+<blockquote>
+<p><strong>Penjelasan</strong>: ngModel membuat form control dari sebuah domain dan akan mem-bind menjadi form control element. (Untuk soal 11 dan 12 perbedaannya adalah pada soal 11 tidak terdapat ng-reflect-model, sedangkan 12 ada ng-reflect-model yang mana kolom tersebut sudah menjadi FormControl).</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03. Angular Fundamental.html" class="navigation navigation-prev " aria-label="Previous page: 03. Angular Fundamental">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05. Directive.html" class="navigation navigation-next " aria-label="Next page: 05. Directive">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04. Displaying Data And Binding Data","level":"1.4","depth":1,"next":{"title":"05. Directive","level":"1.5","depth":1,"path":"05. Directive.md","ref":"05. Directive.md","articles":[]},"previous":{"title":"03. Angular Fundamental","level":"1.3","depth":1,"path":"03. Angular Fundamental.md","ref":"03. Angular Fundamental.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04. Displaying Data And Binding Data.md","mtime":"2019-03-03T07:41:14.763Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T10:49:47.690Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,469 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>09. HTTP Services · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10. Routes.html" />
+    
+    
+    <link rel="prev" href="08. Reactive Form.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02. Typescript.html">
+            
+                <a href="02. Typescript.html">
+            
+                    
+                    02. Typescript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03. Angular Fundamental.html">
+            
+                <a href="03. Angular Fundamental.html">
+            
+                    
+                    03. Angular Fundamental
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04. Displaying Data And Binding Data.html">
+            
+                <a href="04. Displaying Data And Binding Data.html">
+            
+                    
+                    04. Displaying Data And Binding Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05. Directive.html">
+            
+                <a href="05. Directive.html">
+            
+                    
+                    05. Directive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06. Template-Driven Forms.html">
+            
+                <a href="06. Template-Driven Forms.html">
+            
+                    
+                    06. Template-Driven Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="08. Reactive Form.html">
+            
+                <a href="08. Reactive Form.html">
+            
+                    
+                    08. Reactive Form
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="09. HTTP Services.html">
+            
+                <a href="09. HTTP Services.html">
+            
+                    
+                    09. HTTP Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="10. Routes.html">
+            
+                <a href="10. Routes.html">
+            
+                    
+                    10. Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="11. Authentication and Authorization.html">
+            
+                <a href="11. Authentication and Authorization.html">
+            
+                    
+                    11. Authentication and Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="12. Deployment.html">
+            
+                <a href="12. Deployment.html">
+            
+                    
+                    12. Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >09. HTTP Services</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="09-http-services">09. HTTP Services</h1>
+<h2 id="praktikum---bagian-1-jsonplaceholder">Praktikum - Bagian 1: JSONPlaceHolder</h2>
+<ul>
+<li>Membuka website <a href="http://jsonplaceholder.typicode.com/" target="_blank">http://jsonplaceholder.typicode.com/</a></li>
+</ul>
+<p><img src="img/09/1.bmp" alt=""></p>
+<h2 id="praktikum---bagian-2-getting-data">Praktikum - Bagian 2: Getting Data</h2>
+<ul>
+<li>Membuat component baru dengan nama posts dengan perintah <code>ng g c posts</code></li>
+</ul>
+<p><img src="img/09/2.bmp" alt=""></p>
+<ul>
+<li>Import HTTP Module pada file <strong>app.module.ts</strong></li>
+</ul>
+<p><img src="img/09/3.bmp" alt=""></p>
+<ul>
+<li>Memodifikasi file <strong>posts.component.ts</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/4.bmp" alt=""></p>
+<ul>
+<li>Memodifikasi file <strong>posts.component.html</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/5.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/09/6.bmp" alt=""></p>
+<ul>
+<li>Meng-comment <code>HttpModule</code> pada file <strong>app.module.ts</strong></li>
+</ul>
+<p><img src="img/09/7.bmp" alt=""></p>
+<ul>
+<li>Error akan muncul seperti berikut:</li>
+</ul>
+<p><img src="img/09/8.bmp" alt=""></p>
+<blockquote>
+<p>Penjelasan karena <code>HttpModule</code> dihapus, maka provider akan mencari http module</p>
+</blockquote>
+<ul>
+<li>Memperbaiki code pada file <strong>posts.component.ts</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/9.bmp" alt=""></p>
+<ul>
+<li>Error akan muncul seperti berikut:</li>
+</ul>
+<p><img src="img/09/10.bmp" alt=""></p>
+<blockquote>
+<p>Penjelasan karena <code>HttpModule</code> dihapus, maka provider akan mencari http module</p>
+</blockquote>
+<ul>
+<li>Memodifikasi file <strong>posts.component.html</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/11.bmp" alt=""></p>
+<ul>
+<li>Memodifikasi file <strong>posts.component.ts</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/12.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/09/13.bmp" alt=""></p>
+<h2 id="praktikum---bagian-3-creating-data">Praktikum - Bagian 3: Creating Data</h2>
+<ul>
+<li>Menambahkan code pada file <strong>posts.component.html</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/14.bmp" alt=""></p>
+<ul>
+<li>Memodifikasi file <strong>posts.component.ts</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/15.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/09/16.bmp" alt=""></p>
+<h2 id="praktikum---bagian-4-updating-data">Praktikum - Bagian 4: Updating Data</h2>
+<ul>
+<li>Menambahkan code pada file <strong>posts.component.ts</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/17.bmp" alt=""></p>
+<ul>
+<li>Menambahkan code pada file <strong>posts.component.html</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/18.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/09/19.bmp" alt=""></p>
+<blockquote>
+<p>patch adalah untuk merequest http method</p>
+</blockquote>
+<h2 id="praktikum---bagian-5-deleting-data">Praktikum - Bagian 5: Deleting Data</h2>
+<ul>
+<li>Menambahkan code pada file <strong>posts.component.ts</strong> seperti berikut:</li>
+</ul>
+<p><img src="img/09/20.bmp" alt=""></p>
+<ul>
+<li>Menambahkan code pada file <strong>posts.component.html</strong> menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/09/21.bmp" alt=""></p>
+<ul>
+<li>Hasilnya seperti berikut:</li>
+</ul>
+<p><img src="img/09/22.bmp" alt=""></p>
+<blockquote>
+<p>Menghapus element dari sebuah array dan, jika perlu, memasukkan element baru di tempat tersebut, mengembalikan element yang sudah dihapus.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08. Reactive Form.html" class="navigation navigation-prev " aria-label="Previous page: 08. Reactive Form">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10. Routes.html" class="navigation navigation-next " aria-label="Next page: 10. Routes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"09. HTTP Services","level":"1.8","depth":1,"next":{"title":"10. Routes","level":"1.9","depth":1,"path":"10. Routes.md","ref":"10. Routes.md","articles":[]},"previous":{"title":"08. Reactive Form","level":"1.7","depth":1,"path":"08. Reactive Form.md","ref":"08. Reactive Form.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"09. HTTP Services.md","mtime":"2019-04-29T12:42:25.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T10:49:47.690Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
