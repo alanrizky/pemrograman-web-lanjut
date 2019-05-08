@@ -1,100 +1,60 @@
-# 11. Authentication and Authorization
+# 12. Deployment
 
-Praktikum - Bagian 1: Implementation Login
+Praktikum - Bagian 1: Preparing for Deployment
 ---
 
-* Membuka folder **auth-demo-starter**
+* Menjalankan perintah `./node_modules/.bin/ngc`
 
-![](img/11/1.bmp)
+![](img/12/1.bmp)
 
-* Menginstall angular2-jwt dengan perintah `npm install angular2-jwt --save`:
+* Muncul folder dist yang akan mengcompile file ts
 
-![](img/11/2.bmp)
+![](img/12/2.bmp)
+
+Praktikum - Bagian 2: Environments
+---
+
+* Buka file **environments.prod.ts** kemudian menambahkan code sebagai berikut:
+
+![](img/12/3.bmp)
+
+* Buka file **environment.ts** kemudian ganti code menjadi sebagai berikut:
+
+![](img/12/4.bmp)
+
+* Buka file **navbar.component.ts** kemudian menambahkan code sebagai berikut:
+
+![](img/12/5.bmp)
+
+* Buka file **navbar.component.html** kemudian menambahkan code sebagai berikut:
+
+![](img/12/6.bmp)
 
 * Hasilnya seperti berikut:
 
-![](img/11/3.bmp)
+![](img/12/7.bmp)
 
-* Membuka file **auth.service.ts** kemudian menambahkan code seperti berikut:
+* Menduplikasi file **environment.test.ts**
 
-![](img/11/4.bmp)
+![](img/12/8.bmp)
 
-* Mengisi email dan password pada login.
+* Membuka file **.angular-cli.json** kemudian menambahkan code sebagai berikut:
 
-![](img/11/5.bmp)
+![](img/12/9.bmp)
 
-* Mengisi email dengan format yang salah
+* Menjalankan dengan perintah sebagai berikut:
 
-![](img/11/6.bmp)
-
-* Membuka file **auth.service.ts** kemudian ganti code menjadi sebagai berikut:
-
-![](img/11/7.bmp)
+![](img/12/10.bmp)
 
 * Hasilnya seperti berikut:
 
-![](img/11/8.bmp)
+![](img/12/11.bmp)
 
-Praktikum - Bagian 2: Implementasi Logout
+Praktikum - Bagian 3: Deploying to Github Pages
 ---
 
-* Membuka file **home.component.html** kemudian menambahkan code seperti berikut:
+* Melakukan git remote 
 
-![](img/11/9.bmp)
+![](img/12/12.bmp)
 
-* Membuka file **auth.service.ts** kemudian menambahkan code seperti berikut:
-
-![](img/11/10.bmp)
-
-* Hasilnya seperti berikut:
-
-![](img/11/11.bmp)
-
-Praktikum - Bagian 3: Getting the Current User
----
-
-* Membuat token di jwt.io
-
-![](img/11/12.bmp)
-
-* Membuka file **auth.service.ts** kemudian ganti code menjadi sebagai berikut:
-
-![](img/11/13.bmp)
-
-* Membuka file **auth.service.ts** kemudian menambahkan code seperti berikut:
-
-![](img/11/14.bmp)
-
-* Membuka file **auth.service.ts** kemudian ganti token menjadi berikut:
-
-![](img/11/15.bmp)
-
-* Membuka file **home.component.html** kemudian ganti code menjadi sebagai berikut:
-
-![](img/11/16.bmp)
-
-* Halaman awal
-
-![](img/11/17.bmp)
-
-* Login seperti yang sudah di tentukan
-
-![](img/11/18.bmp)
-
-* Token akan tersimpan
-
-![](img/11/19.bmp)
-
-* Nama akan berubah sesuai login
-
-![](img/11/20.bmp)
-
-* Halaman admin
-
-![](img/11/21.bmp)
-
-* Logout maka token akan hilang
-
-![](img/11/22.bmp)
-
-> Penjelasan : Kita masuk sebagai admin (token yang sudah dibuat adalah user sebagai admin), jadi jika kita login, dengan user itu, maka halaman admin akan terbuka. Dan jika di logout maka token akan hilang.
+* 
