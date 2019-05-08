@@ -9,5 +9,7 @@
 * [08. Reactive Form](08. Reactive Form.md)
 * [09. HTTP Services](09. HTTP Services.md)
 * [10. Routes](10. Routes.md)
+* [11. Authentication and Authorization](11. Authentication and Authorization.md)
+* [12. Deployment](12. Deployment.md)
 
 
